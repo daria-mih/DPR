@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace StrategyPattern
 {
-    interface IProcessingBehaviour
+    public interface IProcessingBehaviour
     {
-        void Run();
+        int Run(BindingList<int> pl);
     }
 }

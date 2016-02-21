@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,12 +12,10 @@ namespace StrategyPattern
     /// </summary>
     class FCFS: IProcessingBehaviour
     {
-        List<int> ListToSort = new List<int>();
-
-
-        public void Run()
+        public int Run(BindingList<int> pl)
         {
-
+            return pl[0];
         }
+        
     }
 }

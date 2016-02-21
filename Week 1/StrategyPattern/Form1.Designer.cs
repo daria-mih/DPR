@@ -34,8 +34,8 @@
             this.rbSeekTime = new System.Windows.Forms.RadioButton();
             this.rbScan = new System.Windows.Forms.RadioButton();
             this.tNextProcess = new System.Windows.Forms.Timer(this.components);
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.tbRun = new System.Windows.Forms.TrackBar();
+            ((System.ComponentModel.ISupportInitialize)(this.tbRun)).BeginInit();
             this.SuspendLayout();
             // 
             // lbThreads
@@ -45,11 +45,11 @@
             this.lbThreads.Name = "lbThreads";
             this.lbThreads.Size = new System.Drawing.Size(79, 264);
             this.lbThreads.TabIndex = 1;
-            this.lbThreads.SelectedIndexChanged += new System.EventHandler(this.lbThreads_SelectedIndexChanged);
             // 
             // rbFirstCome
             // 
             this.rbFirstCome.AutoSize = true;
+            this.rbFirstCome.Checked = true;
             this.rbFirstCome.Location = new System.Drawing.Point(172, 12);
             this.rbFirstCome.Name = "rbFirstCome";
             this.rbFirstCome.Size = new System.Drawing.Size(127, 17);
@@ -85,29 +85,36 @@
             // 
             // tNextProcess
             // 
-            this.tNextProcess.Interval = 500;
+            this.tNextProcess.Enabled = true;
+            this.tNextProcess.Tick += new System.EventHandler(this.tNextProcess_Tick);
             // 
-            // trackBar1
+            // tbRun
             // 
-            this.trackBar1.Location = new System.Drawing.Point(12, 12);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar1.Size = new System.Drawing.Size(45, 264);
-            this.trackBar1.TabIndex = 5;
+            this.tbRun.LargeChange = 1;
+            this.tbRun.Location = new System.Drawing.Point(12, 12);
+            this.tbRun.Maximum = 30;
+            this.tbRun.Name = "tbRun";
+            this.tbRun.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.tbRun.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tbRun.Size = new System.Drawing.Size(45, 264);
+            this.tbRun.TabIndex = 5;
+            this.tbRun.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.tbRun.Value = 30;
+            this.tbRun.Scroll += new System.EventHandler(this.tbRun_Scroll);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(301, 289);
-            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.tbRun);
             this.Controls.Add(this.rbScan);
             this.Controls.Add(this.rbSeekTime);
             this.Controls.Add(this.rbFirstCome);
             this.Controls.Add(this.lbThreads);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbRun)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,7 +126,7 @@
         private System.Windows.Forms.RadioButton rbSeekTime;
         private System.Windows.Forms.RadioButton rbScan;
         private System.Windows.Forms.Timer tNextProcess;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar tbRun;
     }
 }
 
