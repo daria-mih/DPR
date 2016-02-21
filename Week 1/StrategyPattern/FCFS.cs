@@ -11,6 +11,9 @@ namespace StrategyPattern
     /// </summary>
     class FCFS: IProcessingBehaviour
     {
+        List<int> ListToSort = new List<int>();
+
+
         public void Run()
         {
 
