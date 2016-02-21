@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace StrategyPattern
 {
-    class FCFS: ProcessingBehaviour
+    class FCFS : ProcessingBehaviour
     {
+        List<int> ListToSort = new List<int>();
+
+
         public void Run()
         {
 
