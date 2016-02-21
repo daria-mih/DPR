@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StrategyPattern
 {
-    interface ProcessingBehaviour
+    interface IProcessingBehaviour
     {
         void Run();
     }

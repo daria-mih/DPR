@@ -8,16 +8,20 @@ namespace StrategyPattern
 {
    public class ThreadHandler
     {
-        ProcessingBehaviour pb;
+        IProcessingBehaviour pb;
+        Random rnd = new Random();
+        public int myNumber;
+        public List<int> randomList = new List<int>();
+
+        public ThreadHandler()
+        {
+
+        }
+
         public void PerformRun()
         {
             pb.Run();
         }
-
-        Random rnd = new Random();
-        public int myNumber;
-        myNumber = rnd.Next(1, 100);
-        public List<int> randomList = new List<int>();
         
      
     }

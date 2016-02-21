@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace StrategyPattern
 {
-    class SCAN : ProcessingBehaviour
+    /// <summary>
+    /// SCAN (elevator) 
+    /// next number but got to min/max
+    /// </summary>
+    class SCAN : IProcessingBehaviour
     {
         public void Run()
         {

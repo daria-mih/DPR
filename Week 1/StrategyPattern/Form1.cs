@@ -16,5 +16,25 @@ namespace StrategyPattern
         {
             InitializeComponent();
         }
+
+        private void rbScan_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbSeekTime_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void rbFirstCome_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbThreads_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

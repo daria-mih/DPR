@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace StrategyPattern
 {
-    class SSTF : ProcessingBehaviour
+    /// <summary>
+    /// Shortest seektime first
+    /// (smallest difference between adjacent processes)
+    /// </summary>
+    class SSTF : IProcessingBehaviour
     {
         public void Run()
         {

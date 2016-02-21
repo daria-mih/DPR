@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace StrategyPattern
 {
-    class FCFS: ProcessingBehaviour
+    /// <summary>
+    /// First Come First Serve
+    /// </summary>
+    class FCFS: IProcessingBehaviour
     {
         public void Run()
         {
