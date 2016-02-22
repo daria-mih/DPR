@@ -9,6 +9,12 @@ namespace StrategyPattern
 {
     public interface IProcessingBehaviour
     {
-        int Run(BindingList<int> pl);
+        /// <summary>
+        /// Calculates the next process
+        /// </summary>
+        /// <param name="current"></param>
+        /// <param name="pl"></param>
+        /// <returns></returns>
+        int Run(int current, BindingList<int> pl);
     }
 }

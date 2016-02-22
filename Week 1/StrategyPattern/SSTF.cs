@@ -13,9 +13,11 @@ namespace StrategyPattern
     /// </summary>
     class SSTF : IProcessingBehaviour
     {
-        public int Run(BindingList<int> pl)
+
+        public int Run(int current, BindingList<int> pl)
         {
-            throw new NotImplementedException();
+            return pl.Aggregate((x, y) => Math.Abs(x - current) < Math.Abs(y - current) ? x : y);
         }
     }
 }
+

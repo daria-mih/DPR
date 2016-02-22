@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace StrategyPattern
 {
-    public class ThreadHandler
+    public class ProcessHandler
     {
         public IProcessingBehaviour pb;
 
-        public ThreadHandler(IProcessingBehaviour pb)
+        public ProcessHandler(IProcessingBehaviour pb)
         {
             this.pb = pb;
         }
 
-        public int PerformRun(BindingList<int> pl)
+        public int PerformRun(int current, BindingList<int> pl)
         {
-            return pb.Run(pl);
+            return pb.Run(current, pl);
         }
     }
 }

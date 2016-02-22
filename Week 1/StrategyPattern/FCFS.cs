@@ -12,7 +12,7 @@ namespace StrategyPattern
     /// </summary>
     class FCFS: IProcessingBehaviour
     {
-        public int Run(BindingList<int> pl)
+        public int Run(int current, BindingList<int> pl)
         {
             return pl[0];
         }

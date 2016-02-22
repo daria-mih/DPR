@@ -29,22 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.lbThreads = new System.Windows.Forms.ListBox();
+            this.lbProcess = new System.Windows.Forms.ListBox();
             this.rbFirstCome = new System.Windows.Forms.RadioButton();
             this.rbSeekTime = new System.Windows.Forms.RadioButton();
             this.rbScan = new System.Windows.Forms.RadioButton();
-            this.tNextProcess = new System.Windows.Forms.Timer(this.components);
+            this.timNextProcess = new System.Windows.Forms.Timer(this.components);
             this.tbRun = new System.Windows.Forms.TrackBar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblNextProcess = new System.Windows.Forms.Label();
+            this.btnStartStop = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tbRun)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbThreads
+            // lbProcess
             // 
-            this.lbThreads.FormattingEnabled = true;
-            this.lbThreads.Location = new System.Drawing.Point(87, 12);
-            this.lbThreads.Name = "lbThreads";
-            this.lbThreads.Size = new System.Drawing.Size(79, 264);
-            this.lbThreads.TabIndex = 1;
+            this.lbProcess.FormattingEnabled = true;
+            this.lbProcess.Location = new System.Drawing.Point(87, 12);
+            this.lbProcess.Name = "lbProcess";
+            this.lbProcess.Size = new System.Drawing.Size(79, 264);
+            this.lbProcess.TabIndex = 1;
             // 
             // rbFirstCome
             // 
@@ -83,10 +86,10 @@
             this.rbScan.UseVisualStyleBackColor = true;
             this.rbScan.CheckedChanged += new System.EventHandler(this.rbScan_CheckedChanged);
             // 
-            // tNextProcess
+            // timNextProcess
             // 
-            this.tNextProcess.Enabled = true;
-            this.tNextProcess.Tick += new System.EventHandler(this.tNextProcess_Tick);
+            this.timNextProcess.Interval = 15;
+            this.timNextProcess.Tick += new System.EventHandler(this.tNextProcess_Tick);
             // 
             // tbRun
             // 
@@ -100,20 +103,50 @@
             this.tbRun.TabIndex = 5;
             this.tbRun.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.tbRun.Value = 30;
-            this.tbRun.Scroll += new System.EventHandler(this.tbRun_Scroll);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(169, 234);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Next process:";
+            // 
+            // lblNextProcess
+            // 
+            this.lblNextProcess.AutoSize = true;
+            this.lblNextProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNextProcess.Location = new System.Drawing.Point(166, 249);
+            this.lblNextProcess.Name = "lblNextProcess";
+            this.lblNextProcess.Size = new System.Drawing.Size(0, 31);
+            this.lblNextProcess.TabIndex = 7;
+            // 
+            // btnStartStop
+            // 
+            this.btnStartStop.Location = new System.Drawing.Point(172, 154);
+            this.btnStartStop.Name = "btnStartStop";
+            this.btnStartStop.Size = new System.Drawing.Size(117, 23);
+            this.btnStartStop.TabIndex = 8;
+            this.btnStartStop.Text = "Start";
+            this.btnStartStop.UseVisualStyleBackColor = true;
+            this.btnStartStop.Click += new System.EventHandler(this.btnStartStop_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(301, 289);
+            this.Controls.Add(this.btnStartStop);
+            this.Controls.Add(this.lblNextProcess);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.tbRun);
             this.Controls.Add(this.rbScan);
             this.Controls.Add(this.rbSeekTime);
             this.Controls.Add(this.rbFirstCome);
-            this.Controls.Add(this.lbThreads);
+            this.Controls.Add(this.lbProcess);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Operating System";
             ((System.ComponentModel.ISupportInitialize)(this.tbRun)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -121,12 +154,15 @@
         }
 
         #endregion
-        private System.Windows.Forms.ListBox lbThreads;
+        private System.Windows.Forms.ListBox lbProcess;
         private System.Windows.Forms.RadioButton rbFirstCome;
         private System.Windows.Forms.RadioButton rbSeekTime;
         private System.Windows.Forms.RadioButton rbScan;
-        private System.Windows.Forms.Timer tNextProcess;
+        private System.Windows.Forms.Timer timNextProcess;
         private System.Windows.Forms.TrackBar tbRun;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNextProcess;
+        private System.Windows.Forms.Button btnStartStop;
     }
 }
 
