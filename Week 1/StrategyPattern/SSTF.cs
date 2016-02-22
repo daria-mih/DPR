@@ -11,7 +11,7 @@ namespace StrategyPattern
     /// Shortest seektime first
     /// (smallest difference between adjacent processes)
     /// </summary>
-    class SSTF : IProcessingBehaviour
+    public class SSTF : IProcessingBehaviour
     {
 
         public int Run(int current, BindingList<int> pl)

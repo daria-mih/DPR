@@ -14,26 +14,28 @@ namespace StrategyPattern
     {
         int min = 0;
         int max = 250;
-        private ProcessHandler th;
-        private Random rnd;
-        public int myNumber;
-        public BindingList<int> processList;
-
-        private int prevProcess;
+        ProcessHandler ph;
+        Random rnd;
+        int myNumber;
+        BindingList<int> processList;
+        int prevProcess;
         bool GoUp;
         bool stopped = true;
         public Form1()
         {
             processList = new BindingList<int>();
             rnd = new Random();
-            th = new ProcessHandler(new FCFS());
+            ph = new ProcessHandler(new FCFS());
             GoUp = true;
 
             InitializeComponent();
+
             prevProcess = (tbRun.Maximum - tbRun.Value);
             tbRun.Minimum = min;
             tbRun.Maximum = max;
             tbRun.Value = max;
+            lbmin.Text = min.ToString();
+            lbmax.Text = max.ToString();
 
             FillList();
 
@@ -41,16 +43,16 @@ namespace StrategyPattern
         }
         private void rbFirstCome_CheckedChanged(object sender, EventArgs e)
         {
-            th = new ProcessHandler(new FCFS());
+            ph = new ProcessHandler(new FCFS());
         }
         private void rbSeekTime_CheckedChanged(object sender, EventArgs e)
         {
             prevProcess = (tbRun.Maximum - tbRun.Value);
-            th = new ProcessHandler(new SSTF());
+            ph = new ProcessHandler(new SSTF());
         }
         private void rbScan_CheckedChanged(object sender, EventArgs e)
         {
-            th = new ProcessHandler(new SCAN(GoUp));
+            ph = new ProcessHandler(new SCAN(GoUp));
         }
         /// <summary>
         /// Ticks every set interval
@@ -59,21 +61,21 @@ namespace StrategyPattern
         /// <param name="e"></param>
         private void tNextProcess_Tick(object sender, EventArgs e)
         {
-            if ((tbRun.Maximum - tbRun.Value) == th.PerformRun(prevProcess, processList))
+            if ((tbRun.Maximum - tbRun.Value) == ph.PerformRun(prevProcess, processList))
             {
-                processList.Remove(th.PerformRun(prevProcess, processList));
+                processList.Remove(ph.PerformRun(prevProcess, processList));
                 prevProcess = (tbRun.Maximum - tbRun.Value);
                 AddUniqueNumber();
             }
-            else if ((tbRun.Maximum - tbRun.Value) < th.PerformRun(prevProcess, processList))
+            else if ((tbRun.Maximum - tbRun.Value) < ph.PerformRun(prevProcess, processList))
             {
                 tbRun.Value--;
             }
-            else if ((tbRun.Maximum - tbRun.Value) > th.PerformRun(prevProcess, processList))
+            else if ((tbRun.Maximum - tbRun.Value) > ph.PerformRun(prevProcess, processList))
             {
                 tbRun.Value++;
             }
-            lblNextProcess.Text = (th.PerformRun(prevProcess, processList)).ToString();
+            lblNextProcess.Text = (ph.PerformRun(prevProcess, processList)).ToString();
         }
     
 

@@ -9,9 +9,10 @@ namespace StrategyPattern
 {
     /// <summary>
     /// SCAN (elevator) 
-    /// next number but got to min/max
+    /// processes numbers on the way from the smallest number to the biggest(or reverse)
+    /// changing the direction at those numbers
     /// </summary>
-    class SCAN : IProcessingBehaviour
+    public class SCAN : IProcessingBehaviour
     {
         bool GoUp;
         bool deleted;

@@ -38,6 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblNextProcess = new System.Windows.Forms.Label();
             this.btnStartStop = new System.Windows.Forms.Button();
+            this.lbmin = new System.Windows.Forms.Label();
+            this.lbmax = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tbRun)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,11 +134,29 @@
             this.btnStartStop.UseVisualStyleBackColor = true;
             this.btnStartStop.Click += new System.EventHandler(this.btnStartStop_Click);
             // 
+            // lbmin
+            // 
+            this.lbmin.AutoSize = true;
+            this.lbmin.Location = new System.Drawing.Point(60, 16);
+            this.lbmin.Name = "lbmin";
+            this.lbmin.Size = new System.Drawing.Size(0, 13);
+            this.lbmin.TabIndex = 9;
+            // 
+            // lbmax
+            // 
+            this.lbmax.AutoSize = true;
+            this.lbmax.Location = new System.Drawing.Point(60, 260);
+            this.lbmax.Name = "lbmax";
+            this.lbmax.Size = new System.Drawing.Size(0, 13);
+            this.lbmax.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(301, 289);
+            this.Controls.Add(this.lbmax);
+            this.Controls.Add(this.lbmin);
             this.Controls.Add(this.btnStartStop);
             this.Controls.Add(this.lblNextProcess);
             this.Controls.Add(this.label1);
@@ -163,6 +183,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblNextProcess;
         private System.Windows.Forms.Button btnStartStop;
+        private System.Windows.Forms.Label lbmin;
+        private System.Windows.Forms.Label lbmax;
     }
 }
 
