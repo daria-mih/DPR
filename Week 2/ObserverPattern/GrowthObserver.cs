@@ -6,20 +6,26 @@ using System.Threading.Tasks;
 
 namespace ObserverPattern
 {
-    class GrowthObserver : IObserverPull
+    class HeightObserver : IObserverPull
     {
         IPersonRegister p;
         public int height;
 
-        GrowthObserver(IPersonRegister p)
+       public HeightObserver(IPersonRegister p)
         {
             height = 0;
             this.p = p;
             p.Attach(this);
         }
+        
         public void Pull()
         {
             height = p.GetHeight();
+        }
+
+        public int ToForm()
+        {
+            return height;
         }
     }
 }

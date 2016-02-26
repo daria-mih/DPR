@@ -10,7 +10,7 @@ namespace ObserverPattern
     {
         IPersonRegister p;
         int ageInMonths;
-        MonthObserver(IPersonRegister p)
+        public MonthObserver(IPersonRegister p)
         {
             this.p = p;
             p.Attach(this);
@@ -18,6 +18,11 @@ namespace ObserverPattern
         public void Pull()
         {
             ageInMonths = p.GetAge()*12;
+        }
+
+        public int ToForm()
+        {
+            return ageInMonths;
         }
     }
 }

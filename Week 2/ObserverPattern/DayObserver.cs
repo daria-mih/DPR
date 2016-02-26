@@ -11,7 +11,7 @@ namespace ObserverPattern
         IPersonRegister p { get; set; }
         public int ageInDays;
 
-        DayObserver(IPersonRegister p)
+        public DayObserver(IPersonRegister p)
         {
             ageInDays = 0;
             this.p = p;
@@ -21,6 +21,11 @@ namespace ObserverPattern
         {
             int years = p.GetAge();
             ageInDays = (years * 365) + (years / 4);
+        }
+
+        public int ToForm()
+        {
+            return ageInDays;
         }
     }
 }

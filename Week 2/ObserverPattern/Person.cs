@@ -8,15 +8,21 @@ namespace ObserverPattern
 {
     class Person
     {
-        public string name;
-        public int age;
-        public int height;
+        public string name = null;
+        public int age = 0;
+        public int height = 0;
 
         public Person(string n)
         {
             name = n;
             age = 0;
             height = 20;
+        }
+        public Person(string n, int start)
+        {
+            name = n;
+            age = 0;
+            height = start;
         }
         public void GrowUp()
         {

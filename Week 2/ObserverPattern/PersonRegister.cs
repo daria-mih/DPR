@@ -9,22 +9,30 @@ namespace ObserverPattern
     class PersonRegister : IPersonRegister
     {
         public List<IObserverPull> observers;
-        Person p;
+        public Person p;
 
-        PersonRegister()
+        public PersonRegister()
         {
             observers = new List<IObserverPull>();
-            p = new Person("Joris Geurts");
+            p = new Person("Joris Geurts", 0);
+        }
+
+        public void CreateKillPerson(bool alive)
+        {
+            if (alive)
+                p = new Person("Joris Geurts");
         }
 
         public void Attach(IObserverPull o)
         {
             observers.Add(o);
+            Notify();
         }
 
         public void Detach(IObserverPull o)
         {
             observers.Remove(o);
+            Notify();
         }
 
         public void Notify()

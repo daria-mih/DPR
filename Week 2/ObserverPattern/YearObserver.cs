@@ -11,7 +11,7 @@ namespace ObserverPattern
         public int ageInYears;
         IPersonRegister p;
 
-        YearObserver(IPersonRegister p)
+        public YearObserver(IPersonRegister p)
         {
             ageInYears = 0;
             this.p = p;
@@ -20,6 +20,11 @@ namespace ObserverPattern
         public void Pull()
         {
             ageInYears = p.GetAge();
+        }
+
+        public int ToForm()
+        {
+            return ageInYears;
         }
     }
 }

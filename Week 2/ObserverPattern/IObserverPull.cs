@@ -9,5 +9,7 @@ namespace ObserverPattern
     public interface IObserverPull
     {
         void Pull();
+
+        int ToForm();
     }
 }
