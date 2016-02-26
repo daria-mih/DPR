@@ -74,23 +74,21 @@ namespace ObserverPattern
         }
 
 
-
         private void TimerAge_Tick(object sender, EventArgs e)
         {
             pr.p.GrowUp();
             UpdateUI();
         }
-
         private void lbType_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
                 pr.Detach(pr.observers[lbType.SelectedIndex]);
-                UpdateUI();
             }
-            catch (Exception)
+            catch (Exception) { }
+            finally
             {
-
+                UpdateUI();
             }
         }
 
@@ -99,11 +97,11 @@ namespace ObserverPattern
             try
             {
                 pr.Detach(pr.observers[lbValue.SelectedIndex]);
-                UpdateUI();
             }
-            catch (Exception)
+            catch (Exception) { }
+            finally
             {
-
+                UpdateUI();
             }
         }
 
@@ -112,11 +110,11 @@ namespace ObserverPattern
             try
             {
                 pr.Detach(pr.observers[lbExtension.SelectedIndex]);
-                UpdateUI();
             }
-            catch (Exception)
+            catch (Exception) { }
+            finally
             {
-
+                UpdateUI();
             }
         }
 
