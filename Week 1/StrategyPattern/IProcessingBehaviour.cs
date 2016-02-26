@@ -10,7 +10,7 @@ namespace StrategyPattern
     public interface IProcessingBehaviour
     {
         /// <summary>
-        /// Calculates the next process
+        /// Interface for implementing different ways of processing numbers(processes)
         /// </summary>
         /// <param name="current"></param>
         /// <param name="pl"></param>

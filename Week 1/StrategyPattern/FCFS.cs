@@ -10,7 +10,7 @@ namespace StrategyPattern
     /// <summary>
     /// First Come First Serve
     /// </summary>
-    class FCFS: IProcessingBehaviour
+    public class FCFS: IProcessingBehaviour
     {
         public int Run(int current, BindingList<int> pl)
         {
