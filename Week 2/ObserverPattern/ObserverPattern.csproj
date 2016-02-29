@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DayObserver.cs" />
-    <Compile Include="GrowthObserver.cs" />
+    <Compile Include="HeightObserver.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="PersonRegister.cs" />
     <Compile Include="YearObserver.cs" />

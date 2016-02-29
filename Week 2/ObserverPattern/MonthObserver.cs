@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObserverPattern
 {
-    class MonthObserver : IObserverPull
+    public class MonthObserver : IObserverPull
     {
         IPersonRegister p;
         int ageInMonths;

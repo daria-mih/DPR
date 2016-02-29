@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObserverPattern
 {
-    class DayObserver : IObserverPull
+    public class DayObserver : IObserverPull
     {
         IPersonRegister p { get; set; }
         public int ageInDays;

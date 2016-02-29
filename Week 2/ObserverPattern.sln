@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverPattern", "ObserverPattern\ObserverPattern.csproj", "{7E34157A-840D-4A61-8D06-E017F0B9D437}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestPull", "UnitTestPull\UnitTestPull.csproj", "{26916406-0413-486A-BA4E-65D463B1A82A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7E34157A-840D-4A61-8D06-E017F0B9D437}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E34157A-840D-4A61-8D06-E017F0B9D437}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E34157A-840D-4A61-8D06-E017F0B9D437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26916406-0413-486A-BA4E-65D463B1A82A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26916406-0413-486A-BA4E-65D463B1A82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26916406-0413-486A-BA4E-65D463B1A82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26916406-0413-486A-BA4E-65D463B1A82A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

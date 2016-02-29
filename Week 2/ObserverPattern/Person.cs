@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObserverPattern
 {
-    class Person
+    public class Person
     {
         public string name = null;
         public int age = 0;
@@ -16,7 +16,7 @@ namespace ObserverPattern
         {
             name = n;
             age = 0;
-            height = 20;
+            height = 50;
         }
         public Person(string n, int start)
         {
