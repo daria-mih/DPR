@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObserverPattern
 {
-    class HeightObserver : IObserverPush
+    public class HeightObserver : IObserverPush
     {
         IPersonRegister p;
         public int height;

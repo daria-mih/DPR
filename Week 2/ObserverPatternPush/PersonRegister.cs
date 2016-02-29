@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObserverPattern
 {
-    class PersonRegister : IPersonRegister
+    public class PersonRegister : IPersonRegister
     {
         public List<IObserverPush> observers;
         public Person p;
