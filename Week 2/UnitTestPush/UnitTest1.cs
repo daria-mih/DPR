@@ -26,7 +26,6 @@ namespace UnitTestPush
             IObserverPush o = new YearObserver(pr);
             pr.p.GrowUp();
             List<IObserverPush> observers = new List<IObserverPush>();
-            pr.Attach(o);
             pr.Notify();
             int expectedresult = 1;
             Assert.AreEqual(expectedresult, o.ToForm());
@@ -41,7 +40,6 @@ namespace UnitTestPush
             pr.p.GrowUp();
             pr.p.GrowUp();
             List<IObserverPush> observers = new List<IObserverPush>();
-            pr.Attach(o);
             pr.Notify();
             int expectedresult = 36;
             Assert.AreEqual(expectedresult, o.ToForm());
@@ -55,7 +53,6 @@ namespace UnitTestPush
             pr.p.GrowUp();
             pr.p.GrowUp();
             List<IObserverPush> observers = new List<IObserverPush>();
-            pr.Attach(o);
             pr.Notify();
             int expectedresult = 1095;
             Assert.AreEqual(expectedresult, o.ToForm());
@@ -69,7 +66,6 @@ namespace UnitTestPush
             pr.p.GrowUp();
             pr.p.GrowUp();
             List<IObserverPush> observers = new List<IObserverPush>();
-            pr.Attach(o);
             pr.Notify();
             int expectedresult = 6;
             Assert.AreEqual(expectedresult, o.ToForm());

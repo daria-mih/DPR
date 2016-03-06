@@ -41,7 +41,6 @@ namespace UnitTestPull
             List<IObserverPull> observers = new List<IObserverPull>();
             PersonRegister pr = new PersonRegister();
             IObserverPull dayob = new DayObserver(pr);
-            pr.Attach(dayob);
             pr.p.GrowUp();
             pr.p.GrowUp(); 
             int expectedresult = 730;
@@ -56,7 +55,6 @@ namespace UnitTestPull
             List<IObserverPull> observers = new List<IObserverPull>();
             PersonRegister pr = new PersonRegister();
             IObserverPull mnthob = new MonthObserver(pr);
-            pr.Attach(mnthob);
             pr.p.GrowUp();
             pr.p.GrowUp();
             int expectedresult = 24;
@@ -70,7 +68,6 @@ namespace UnitTestPull
             List<IObserverPull> observers = new List<IObserverPull>();
             PersonRegister pr = new PersonRegister();
             IObserverPull yearob = new YearObserver(pr);
-            pr.Attach(yearob);
             pr.p.GrowUp();
             pr.p.GrowUp();
             int expectedresult = 2;
@@ -84,7 +81,6 @@ namespace UnitTestPull
             List<IObserverPull> observers = new List<IObserverPull>();
             PersonRegister pr = new PersonRegister();
             IObserverPull heightob = new HeightObserver(pr);
-            pr.Attach(heightob);
             pr.p.GrowUp();
             pr.p.GrowUp();
             int expectedresult = 4;
