@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Media;
 
 namespace FactoryPattern
 {
     public interface IPhablet
     {
-        string Call();
+        SoundPlayer Call();
         Bitmap ShowPictureSD();
     }
 }

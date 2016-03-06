@@ -16,6 +16,8 @@ namespace FactoryPattern
         int tablet;
         int phablet;
         FormPhone formphone;
+        FormPhablet formphablet;
+        FormTablet formtablet;
         AbstractFactory samsung, apple, nokia;
         public FactoryForm()
         {
@@ -23,7 +25,11 @@ namespace FactoryPattern
             phone = 0;
             tablet = 0;
             phablet = 0;
+
+            //create forms
             formphone = new FormPhone();
+            formtablet = new FormTablet();
+            formphablet = new FormPhablet();
 
             //create factories
             samsung = new SamsungFactory();
@@ -51,7 +57,15 @@ namespace FactoryPattern
         {
             switch (tablet)
             {
-
+                case 0:
+                    ProduceTablet(nokia);
+                    break;
+                case 1:
+                    ProduceTablet(apple);
+                    break;
+                case 2:
+                    ProduceTablet(samsung);
+                    break;
             }
         }
 
@@ -59,6 +73,15 @@ namespace FactoryPattern
         {
             switch (phablet)
             {
+                case 0:
+                    ProducePhablet(nokia);
+                    break;
+                case 1:
+                    ProducePhablet(apple);
+                    break;
+                case 2:
+                    ProducePhablet(samsung);
+                    break;
 
             }
         }
@@ -69,9 +92,17 @@ namespace FactoryPattern
             formphone.Text = phonefactory.createPhone().GetType().Name;
         }
 
+        private void ProduceTablet(AbstractFactory tabletfactory)
+        {
+            formtablet = new FormTablet(tabletfactory.createTablet());
+            formtablet.Text = tabletfactory.createTablet().GetType().Name;
+        }
 
-
-
+        private void ProducePhablet(AbstractFactory phabletfactory)
+        {
+            formphablet = new FormPhablet(phabletfactory.createPhablet());
+            formphablet.Text = phabletfactory.createPhablet().GetType().Name;
+        }
 
 
 

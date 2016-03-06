@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Media;
 using System.Drawing;
 
 namespace FactoryPattern
@@ -10,9 +11,9 @@ namespace FactoryPattern
     //Samsung products
     class GalaxyNote : IPhablet
     {
-        public string Call()
+        public SoundPlayer Call()
         {
-            return GetType().Name + " is calling";
+            return new SoundPlayer(Properties.Resources.Samsung);
         }
 
         public Bitmap ShowPictureSD()
@@ -22,9 +23,9 @@ namespace FactoryPattern
     }
     class GalaxyMini : IPhone
     {
-        public string Call()
+        public SoundPlayer Call()
         {
-            return GetType().Name + " is calling";
+            return new SoundPlayer(Properties.Resources.Samsung);
         }
 
         public Bitmap ShowPictureLD()
@@ -44,9 +45,9 @@ namespace FactoryPattern
 
     class iPhone : IPhone
     {
-        public string Call()
+        public SoundPlayer Call()
         {
-            return GetType().Name + " is calling";
+            return new SoundPlayer(Properties.Resources.Apple);
         }
 
         public Bitmap ShowPictureLD()
@@ -65,9 +66,9 @@ namespace FactoryPattern
 
     class iPhonePlus : IPhablet
     {
-        public string Call()
+        public SoundPlayer Call()
         {
-            return GetType().Name + " is calling";
+            return new SoundPlayer(Properties.Resources.Apple);
         }
 
         public Bitmap ShowPictureSD()
@@ -80,9 +81,9 @@ namespace FactoryPattern
 
     class Lumia : IPhone
     {
-        public string Call()
+        public SoundPlayer Call()
         {
-            return GetType().Name + " is calling";
+            return new SoundPlayer(Properties.Resources.Nokia);
         }
 
         public Bitmap ShowPictureLD()
@@ -93,9 +94,9 @@ namespace FactoryPattern
 
     class LumiaPhab : IPhablet
     {
-        public string Call()
+        public SoundPlayer Call()
         {
-            return GetType().Name + " is calling";
+            return new SoundPlayer(Properties.Resources.Nokia);
         }
 
         public Bitmap ShowPictureSD()

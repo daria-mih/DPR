@@ -115,12 +115,15 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="resources\Apple.wav" />
     <Content Include="resources\AppleHD.jpg" />
     <Content Include="resources\AppleLD.jpg" />
     <Content Include="resources\AppleSD.jpg" />
+    <Content Include="resources\Nokia.wav" />
     <Content Include="resources\NokiaHD.jpg" />
     <Content Include="resources\NokiaLD.jpg" />
     <Content Include="resources\NokiaSD.jpg" />
+    <Content Include="resources\Samsung.wav" />
     <Content Include="resources\SamsungHD.png" />
     <Content Include="resources\SamsungLD.png" />
     <Content Include="resources\SamsungSD.jpg" />

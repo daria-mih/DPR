@@ -12,14 +12,24 @@ namespace FactoryPattern
 {
     public partial class FormPhablet : Form
     {
+        IPhablet phablet;
+        public FormPhablet(IPhablet ph)
+        {
+            StartPosition = FormStartPosition.CenterScreen;
+            InitializeComponent();
+            phablet = ph;
+            pictureBox1.Image = ph.ShowPictureSD();
+            Show();
+        }
+
         public FormPhablet()
         {
-            InitializeComponent();
+
         }
 
         private void btnCall_Click(object sender, EventArgs e)
         {
-
+            phablet.Call().Play();
         }
     }
 }

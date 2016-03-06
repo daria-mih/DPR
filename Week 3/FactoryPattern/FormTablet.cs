@@ -12,9 +12,19 @@ namespace FactoryPattern
 {
     public partial class FormTablet : Form
     {
+        public FormTablet(ITablet t)
+        {
+            StartPosition = FormStartPosition.CenterScreen;
+            InitializeComponent();
+            pictureBox1.Image = t.ShowPictureHD();
+            Show();
+        }
+        //empty constructor for initialisation of program
         public FormTablet()
         {
             InitializeComponent();
         }
+
     }
 }
+

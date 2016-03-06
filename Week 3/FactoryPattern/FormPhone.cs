@@ -29,7 +29,8 @@ namespace FactoryPattern
 
         private void btnCall_Click(object sender, EventArgs e)
         {
-           lblCalling.Text = phone.Call();
+           phone.Call().Play();
+            
         }
     }
 }

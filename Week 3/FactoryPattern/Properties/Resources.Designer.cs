@@ -61,6 +61,15 @@ namespace FactoryPattern.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Apple {
+            get {
+                return ResourceManager.GetStream("Apple", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap AppleHD {
@@ -91,6 +100,15 @@ namespace FactoryPattern.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Nokia {
+            get {
+                return ResourceManager.GetStream("Nokia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap NokiaHD {
@@ -117,6 +135,15 @@ namespace FactoryPattern.Properties {
             get {
                 object obj = ResourceManager.GetObject("NokiaSD", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Samsung {
+            get {
+                return ResourceManager.GetStream("Samsung", resourceCulture);
             }
         }
         
