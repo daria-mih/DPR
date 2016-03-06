@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace FactoryPattern
 {
@@ -11,31 +12,31 @@ namespace FactoryPattern
     {
         public string Call()
         {
-            throw new NotImplementedException();
+            return GetType().ToString() + " is calling";
         }
 
-        public void PlayVideo()
+        public Bitmap ShowPictureSD()
         {
-            throw new NotImplementedException();
+            return Properties.Resources.AppleLD;
         }
     }
     class GalaxyMini : IPhone
     {
-        public void Call()
+        public string Call()
         {
-            throw new NotImplementedException();
+            return GetType().ToString() + " is calling";
         }
 
-        public void Message()
+        public Bitmap ShowPictureLD()
         {
-            throw new NotImplementedException();
+            return Properties.Resources.SamsungLD;
         }
     }
     class GalaxyTab : ITablet
     {
-        public void PlayVideoHD()
+        public Bitmap ShowPictureHD()
         {
-            throw new NotImplementedException();
+            return Properties.Resources.SamsungHD;
         }
     }
 
@@ -43,35 +44,35 @@ namespace FactoryPattern
 
     class iPhone : IPhone
     {
-        public void Call()
+        public string Call()
         {
-            throw new NotImplementedException();
+            return GetType().ToString() + " is calling";
         }
 
-        public void Message()
+        public Bitmap ShowPictureLD()
         {
-            throw new NotImplementedException();
+            return Properties.Resources.AppleLD;
         }
     }
 
     class iPad : ITablet
     {
-        public void PlayVideoHD()
+        public Bitmap ShowPictureHD()
         {
-            throw new NotImplementedException();
+            return Properties.Resources.AppleHD;
         }
     }
 
     class iPhonePlus : IPhablet
     {
-        public void Call()
+        public string Call()
         {
-            throw new NotImplementedException();
+            return GetType().ToString() + " is calling";
         }
 
-        public void PlayVideo()
+        public Bitmap ShowPictureSD()
         {
-            throw new NotImplementedException();
+            return Properties.Resources.AppleSD;
         }
     }
 
@@ -79,38 +80,38 @@ namespace FactoryPattern
 
     class Lumia : IPhone
     {
-        public void Call()
+        public string Call()
         {
-            throw new NotImplementedException();
+            return GetType().ToString() + " is calling";
         }
 
-        public void Message()
+        public Bitmap ShowPictureLD()
         {
-            throw new NotImplementedException();
+            return Properties.Resources.NokiaLD;
         }
     }
 
-    class Lumia1520 : IPhablet
+    class LumiaPhab : IPhablet
     {
-        public void Call()
+        public string Call()
         {
-            throw new NotImplementedException();
+            return GetType().ToString() + " is calling";
         }
 
-        public void PlayVideo()
-    {
-            throw new NotImplementedException();
-        }
-    }
-
-    class NokiaN1 : ITablet
-    {
-        public void PlayVideoHD()
-    {
-            throw new NotImplementedException();
+        public Bitmap ShowPictureSD()
+        {
+            return Properties.Resources.NokiaSD;
         }
     }
 
+    class LumiaTab : ITablet
+    {
+        public Bitmap ShowPictureHD()
+        {
+            return Properties.Resources.NokiaHD;
+
+        }
+    }
 
 
 }

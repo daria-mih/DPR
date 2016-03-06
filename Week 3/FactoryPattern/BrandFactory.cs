@@ -10,51 +10,51 @@ namespace FactoryPattern
     {
         public IPhablet createPhablet()
         {
-            throw new NotImplementedException();
+            return new GalaxyNote();
         }
 
         public IPhone createPhone()
         {
-            throw new NotImplementedException();
+            return new GalaxyMini();
         }
 
         public ITablet createTablet()
         {
-            throw new NotImplementedException();
+            return  new GalaxyTab();
         }
     }
     class AppleFactory : AbstractFactory
     {
         public IPhablet createPhablet()
         {
-            throw new NotImplementedException();
+            return new iPhonePlus();
         }
 
         public IPhone createPhone()
         {
-            throw new NotImplementedException();
+            return new iPhone();
         }
 
         public ITablet createTablet()
         {
-            throw new NotImplementedException();
+            return new iPad();
         }
     }
     class NokiaFactory : AbstractFactory
     {
         public IPhablet createPhablet()
         {
-            throw new NotImplementedException();
+            return new LumiaPhab();
         }
 
         public IPhone createPhone()
         {
-            throw new NotImplementedException();
+            return new Lumia();
         }
 
         public ITablet createTablet()
         {
-            throw new NotImplementedException();
+            return new LumiaTab();
         }
     }
 }

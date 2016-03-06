@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FactoryPattern
 {
-    interface AbstractFactory
+    public interface AbstractFactory
     {
         IPhone createPhone();
         ITablet createTablet();

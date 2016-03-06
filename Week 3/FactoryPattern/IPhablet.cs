@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace FactoryPattern
 {
-    interface IPhablet
+    public interface IPhablet
     {
         string Call();
-        void PlayVideo();
+        Bitmap ShowPictureSD();
     }
 }

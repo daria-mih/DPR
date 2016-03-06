@@ -54,12 +54,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhone.Designer.cs">
+      <DependentUpon>FormPhone.cs</DependentUpon>
+    </Compile>
     <Compile Include="IPhablet.cs" />
     <Compile Include="ITablet.cs" />
     <Compile Include="IPhone.cs" />
     <Compile Include="AbstractFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhone.resx">
+      <DependentUpon>FormPhone.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -68,6 +80,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -81,6 +94,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="resources\AppleHD.jpg" />
+    <Content Include="resources\AppleLD.jpg" />
+    <Content Include="resources\AppleSD.jpg" />
+    <Content Include="resources\NokiaHD.jpg" />
+    <Content Include="resources\NokiaLD.jpg" />
+    <Content Include="resources\NokiaSD.jpg" />
+    <Content Include="resources\SamsungHD.png" />
+    <Content Include="resources\SamsungLD.png" />
+    <Content Include="resources\SamsungSD.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
