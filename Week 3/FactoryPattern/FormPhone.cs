@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing;
 
 namespace FactoryPattern
 {
@@ -16,6 +15,7 @@ namespace FactoryPattern
         IPhone phone;
         public FormPhone(IPhone p)
         {
+            StartPosition = FormStartPosition.CenterScreen;            
             InitializeComponent();
             phone = p;
             pictureBox1.Image = p.ShowPictureLD();
@@ -25,7 +25,6 @@ namespace FactoryPattern
         public FormPhone()
         {
             InitializeComponent();
-
         }
 
         private void btnCall_Click(object sender, EventArgs e)

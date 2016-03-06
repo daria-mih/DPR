@@ -16,7 +16,7 @@ namespace FactoryPattern
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormFactory());
+            Application.Run(new FactoryForm());
         }
     }
 }

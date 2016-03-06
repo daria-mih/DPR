@@ -12,7 +12,7 @@ namespace FactoryPattern
     {
         public string Call()
         {
-            return GetType().ToString() + " is calling";
+            return GetType().Name + " is calling";
         }
 
         public Bitmap ShowPictureSD()
@@ -24,7 +24,7 @@ namespace FactoryPattern
     {
         public string Call()
         {
-            return GetType().ToString() + " is calling";
+            return GetType().Name + " is calling";
         }
 
         public Bitmap ShowPictureLD()
@@ -46,7 +46,7 @@ namespace FactoryPattern
     {
         public string Call()
         {
-            return GetType().ToString() + " is calling";
+            return GetType().Name + " is calling";
         }
 
         public Bitmap ShowPictureLD()
@@ -67,7 +67,7 @@ namespace FactoryPattern
     {
         public string Call()
         {
-            return GetType().ToString() + " is calling";
+            return GetType().Name + " is calling";
         }
 
         public Bitmap ShowPictureSD()
@@ -82,7 +82,7 @@ namespace FactoryPattern
     {
         public string Call()
         {
-            return GetType().ToString() + " is calling";
+            return GetType().Name + " is calling";
         }
 
         public Bitmap ShowPictureLD()
@@ -95,7 +95,7 @@ namespace FactoryPattern
     {
         public string Call()
         {
-            return GetType().ToString() + " is calling";
+            return GetType().Name + " is calling";
         }
 
         public Bitmap ShowPictureSD()

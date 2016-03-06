@@ -1,6 +1,6 @@
 ﻿namespace FactoryPattern
 {
-    partial class FormFactory
+    partial class FactoryForm
     {
         /// <summary>
         /// Required designer variable.
@@ -78,7 +78,7 @@
             this.gbPhones.Controls.Add(this.rbNokiaPhone);
             this.gbPhones.Location = new System.Drawing.Point(12, 12);
             this.gbPhones.Name = "gbPhones";
-            this.gbPhones.Size = new System.Drawing.Size(121, 100);
+            this.gbPhones.Size = new System.Drawing.Size(145, 100);
             this.gbPhones.TabIndex = 3;
             this.gbPhones.TabStop = false;
             this.gbPhones.Text = "Phones";
@@ -88,9 +88,9 @@
             this.rbSamsungPhone.AutoSize = true;
             this.rbSamsungPhone.Location = new System.Drawing.Point(15, 65);
             this.rbSamsungPhone.Name = "rbSamsungPhone";
-            this.rbSamsungPhone.Size = new System.Drawing.Size(104, 17);
+            this.rbSamsungPhone.Size = new System.Drawing.Size(126, 17);
             this.rbSamsungPhone.TabIndex = 4;
-            this.rbSamsungPhone.Text = "Samsung Galaxy";
+            this.rbSamsungPhone.Text = "Samsung Galaxy Mini";
             this.rbSamsungPhone.UseVisualStyleBackColor = true;
             this.rbSamsungPhone.CheckedChanged += new System.EventHandler(this.rbSamsungPhone_CheckedChanged);
             // 
@@ -126,6 +126,7 @@
             this.rbSamsungTab.TabIndex = 4;
             this.rbSamsungTab.Text = "Samsung Galaxy Tab";
             this.rbSamsungTab.UseVisualStyleBackColor = true;
+            this.rbSamsungTab.CheckedChanged += new System.EventHandler(this.rbSamsungTab_CheckedChanged);
             // 
             // rbAppleTab
             // 
@@ -136,6 +137,7 @@
             this.rbAppleTab.TabIndex = 3;
             this.rbAppleTab.Text = "Apple iPad";
             this.rbAppleTab.UseVisualStyleBackColor = true;
+            this.rbAppleTab.CheckedChanged += new System.EventHandler(this.rbAppleTab_CheckedChanged);
             // 
             // rbNokiaTab
             // 
@@ -148,6 +150,7 @@
             this.rbNokiaTab.TabStop = true;
             this.rbNokiaTab.Text = "Nokia Lumia Tab";
             this.rbNokiaTab.UseVisualStyleBackColor = true;
+            this.rbNokiaTab.CheckedChanged += new System.EventHandler(this.rbNokiaTab_CheckedChanged);
             // 
             // btnTablet
             // 
@@ -190,6 +193,7 @@
             this.rbSamsungPhab.TabIndex = 4;
             this.rbSamsungPhab.Text = "Samsung Galaxy Note";
             this.rbSamsungPhab.UseVisualStyleBackColor = true;
+            this.rbSamsungPhab.CheckedChanged += new System.EventHandler(this.rbSamsungPhab_CheckedChanged);
             // 
             // rbApplePhab
             // 
@@ -200,6 +204,7 @@
             this.rbApplePhab.TabIndex = 3;
             this.rbApplePhab.Text = "Apple iPhone Plus";
             this.rbApplePhab.UseVisualStyleBackColor = true;
+            this.rbApplePhab.CheckedChanged += new System.EventHandler(this.rbApplePhab_CheckedChanged);
             // 
             // rbNokiaPhab
             // 
@@ -212,8 +217,9 @@
             this.rbNokiaPhab.TabStop = true;
             this.rbNokiaPhab.Text = "Nokia Lumia Phab";
             this.rbNokiaPhab.UseVisualStyleBackColor = true;
+            this.rbNokiaPhab.CheckedChanged += new System.EventHandler(this.rbNokiaPhab_CheckedChanged);
             // 
-            // FormFactory
+            // FactoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -224,7 +230,7 @@
             this.Controls.Add(this.gbTablets);
             this.Controls.Add(this.gbPhones);
             this.Controls.Add(this.btnPhone);
-            this.Name = "FormFactory";
+            this.Name = "FactoryForm";
             this.Text = "SmartFactory";
             this.gbPhones.ResumeLayout(false);
             this.gbPhones.PerformLayout();
