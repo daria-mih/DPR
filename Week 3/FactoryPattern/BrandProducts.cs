@@ -9,7 +9,7 @@ namespace FactoryPattern
     //Samsung products
     class GalaxyNote : IPhablet
     {
-        public void Call()
+        public string Call()
         {
             throw new NotImplementedException();
         }
@@ -19,10 +19,23 @@ namespace FactoryPattern
             throw new NotImplementedException();
         }
     }
-    class GalaxyMini:IPhone
+    class GalaxyMini : IPhone
     {
+        public string Call()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Message()
+        {
+            throw new NotImplementedException();
+        }
     }
-    class GalaxyTab:ITablet
+    class GalaxyTab : ITablet
     {
+        public void PlayVideoHD()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

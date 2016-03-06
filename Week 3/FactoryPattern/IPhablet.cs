@@ -8,7 +8,7 @@ namespace FactoryPattern
 {
     interface IPhablet
     {
-        void Call();
+        string Call();
         void PlayVideo();
     }
 }

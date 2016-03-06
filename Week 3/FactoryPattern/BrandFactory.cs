@@ -10,7 +10,7 @@ namespace FactoryPattern
     {
         public IPhablet createPhablet()
         {
-            
+            throw new NotImplementedException();
         }
 
         public IPhone createPhone()

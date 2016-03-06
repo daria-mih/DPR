@@ -8,7 +8,7 @@ namespace FactoryPattern
 {
     interface IPhone
     {
-        void Call();
+        string Call();
         void Message();
     }
 }
