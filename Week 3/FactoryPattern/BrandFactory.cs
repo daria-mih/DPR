@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FactoryPattern
 {
-    class SamsungFactory : AbstractFactory
+   public class SamsungFactory : AbstractFactory
     {
         public IPhablet createPhablet()
         {
@@ -23,7 +23,7 @@ namespace FactoryPattern
             return  new GalaxyTab();
         }
     }
-    class AppleFactory : AbstractFactory
+   public class AppleFactory : AbstractFactory
     {
         public IPhablet createPhablet()
         {
@@ -40,7 +40,7 @@ namespace FactoryPattern
             return new iPad();
         }
     }
-    class NokiaFactory : AbstractFactory
+   public class NokiaFactory : AbstractFactory
     {
         public IPhablet createPhablet()
         {
