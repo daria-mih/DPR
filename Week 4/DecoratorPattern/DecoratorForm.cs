@@ -18,10 +18,10 @@ namespace DecoratorPattern
 
         public DecoratorForm(IWattCalculator d)
         {
-            InitializeComponent();            
-            switcher = 0;
+            InitializeComponent();
             decorator = d;
-            lblWatts.Text = d.Measure().ToString();
+
+            switcher = 0;
             FillForm();
         }
 
@@ -50,13 +50,15 @@ namespace DecoratorPattern
         private void FillForm()
         {
             itemList = new List<string>();
-
             itemList.Add("Buzzer");
             itemList.Add("LED");
             itemList.Add("Resistor");
             itemList.Add("RGBLED");
-
             lbOptions.DataSource = itemList;
+
+            MinimizeBox = false;
+            MaximizeBox = false;
+            lblWatts.Text = decorator.Measure().ToString();
         }
 
         private void lbOptions_SelectedIndexChanged(object sender, EventArgs e)
