@@ -33,5 +33,12 @@ namespace DecoratorPattern
             form.Text = "Breadboard";
             form.Show();
         }
+
+        private void btnArduinoDuo_Click(object sender, EventArgs e)
+        {
+            form = new DecoratorForm(new ArduinoDuo());
+            form.Text = "Arduino Duo";
+            form.Show();
+        }
     }
 }

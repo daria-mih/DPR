@@ -15,7 +15,7 @@ namespace DecoratorPattern
 
         public override double Measure()
         {
-            return (8.9 + decoratedMeasurer.Measure());
+            return (8.91 + decoratedMeasurer.Measure());
         }
     }
     class LED : Decorator
@@ -27,7 +27,7 @@ namespace DecoratorPattern
 
         public override double Measure()
         {
-            return (12.3 + decoratedMeasurer.Measure());
+            return (12.36 + decoratedMeasurer.Measure());
         }
     }
 
@@ -40,7 +40,7 @@ namespace DecoratorPattern
 
         public override double Measure()
         {
-            return (17.2 + decoratedMeasurer.Measure());
+            return (17.24 + decoratedMeasurer.Measure());
         }
     }
 
@@ -53,7 +53,7 @@ namespace DecoratorPattern
 
         public override double Measure()
         {
-            return (15.4 + decoratedMeasurer.Measure());
+            return (15.49 + decoratedMeasurer.Measure());
         }
     }
 }

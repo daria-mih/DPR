@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArduinoDuo.cs" />
     <Compile Include="ArduinoUno.cs" />
     <Compile Include="Breadboard.cs" />
     <Compile Include="Decorator.cs" />
@@ -55,7 +56,7 @@
     <Compile Include="DecoratorForm.Designer.cs">
       <DependentUpon>DecoratorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Decorators.cs" />
+    <Compile Include="Decorations.cs" />
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>

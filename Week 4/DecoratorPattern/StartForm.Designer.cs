@@ -30,6 +30,7 @@
         {
             this.btnArduino = new System.Windows.Forms.Button();
             this.btnBreadboard = new System.Windows.Forms.Button();
+            this.btnArduinoDuo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnArduino
@@ -44,7 +45,7 @@
             // 
             // btnBreadboard
             // 
-            this.btnBreadboard.Location = new System.Drawing.Point(59, 65);
+            this.btnBreadboard.Location = new System.Drawing.Point(59, 81);
             this.btnBreadboard.Name = "btnBreadboard";
             this.btnBreadboard.Size = new System.Drawing.Size(120, 23);
             this.btnBreadboard.TabIndex = 1;
@@ -52,11 +53,22 @@
             this.btnBreadboard.UseVisualStyleBackColor = true;
             this.btnBreadboard.Click += new System.EventHandler(this.btnBreadboard_Click);
             // 
+            // btnArduinoDuo
+            // 
+            this.btnArduinoDuo.Location = new System.Drawing.Point(59, 52);
+            this.btnArduinoDuo.Name = "btnArduinoDuo";
+            this.btnArduinoDuo.Size = new System.Drawing.Size(120, 23);
+            this.btnArduinoDuo.TabIndex = 2;
+            this.btnArduinoDuo.Text = "Decorate ArduinoDuo";
+            this.btnArduinoDuo.UseVisualStyleBackColor = true;
+            this.btnArduinoDuo.Click += new System.EventHandler(this.btnArduinoDuo_Click);
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(238, 117);
+            this.ClientSize = new System.Drawing.Size(238, 127);
+            this.Controls.Add(this.btnArduinoDuo);
             this.Controls.Add(this.btnBreadboard);
             this.Controls.Add(this.btnArduino);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -71,5 +83,6 @@
 
         private System.Windows.Forms.Button btnArduino;
         private System.Windows.Forms.Button btnBreadboard;
+        private System.Windows.Forms.Button btnArduinoDuo;
     }
 }
