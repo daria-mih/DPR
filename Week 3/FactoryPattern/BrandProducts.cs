@@ -9,7 +9,7 @@ using System.Drawing;
 namespace FactoryPattern
 {
     //Samsung products
-    class GalaxyNote : IPhablet
+   public class GalaxyNote : IPhablet
     {
         public SoundPlayer Call()
         {
@@ -21,7 +21,7 @@ namespace FactoryPattern
             return Properties.Resources.AppleLD;
         }
     }
-    class GalaxyMini : IPhone
+   public class GalaxyMini : IPhone
     {
         public SoundPlayer Call()
         {
@@ -33,7 +33,7 @@ namespace FactoryPattern
             return Properties.Resources.SamsungLD;
         }
     }
-    class GalaxyTab : ITablet
+    public class GalaxyTab : ITablet
     {
         public Bitmap ShowPictureHD()
         {
@@ -43,7 +43,7 @@ namespace FactoryPattern
 
     //AppleProducts
 
-    class iPhone : IPhone
+    public class iPhone : IPhone
     {
         public SoundPlayer Call()
         {
@@ -56,7 +56,7 @@ namespace FactoryPattern
         }
     }
 
-    class iPad : ITablet
+    public class iPad : ITablet
     {
         public Bitmap ShowPictureHD()
         {
@@ -64,7 +64,7 @@ namespace FactoryPattern
         }
     }
 
-    class iPhonePlus : IPhablet
+    public class iPhonePlus : IPhablet
     {
         public SoundPlayer Call()
         {
@@ -79,7 +79,7 @@ namespace FactoryPattern
 
     //Nokia
 
-    class Lumia : IPhone
+    public class Lumia : IPhone
     {
         public SoundPlayer Call()
         {
@@ -92,7 +92,7 @@ namespace FactoryPattern
         }
     }
 
-    class LumiaPhab : IPhablet
+    public class LumiaPhab : IPhablet
     {
         public SoundPlayer Call()
         {
@@ -105,7 +105,7 @@ namespace FactoryPattern
         }
     }
 
-    class LumiaTab : ITablet
+    public class LumiaTab : ITablet
     {
         public Bitmap ShowPictureHD()
         {
