@@ -1,4 +1,4 @@
-﻿namespace DecoratorPattern
+﻿namespace WattCalculator
 {
     partial class StartForm
     {

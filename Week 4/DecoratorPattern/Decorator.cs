@@ -4,16 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DecoratorPattern
+namespace WattCalculator
 {
-    abstract class Decorator : IWattCalculator
+    public abstract class Decorator : IWattCalculator
     {
-        public IWattCalculator decoratedMeasurer;
-
-        public Decorator(IWattCalculator m)
-        {
-            decoratedMeasurer = m;
-        }
+        public IWattCalculator decoratedMeasurer;      
 
         public virtual double Measure()
         {

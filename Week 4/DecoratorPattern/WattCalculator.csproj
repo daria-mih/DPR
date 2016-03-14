@@ -7,11 +7,12 @@
     <ProjectGuid>{0F2F4F4A-C48A-480D-9264-9F19841A74A4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DecoratorPattern</RootNamespace>
-    <AssemblyName>DecoratorPattern</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>WattCalculator</RootNamespace>
+    <AssemblyName>WattCalculator</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,9 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArduinoDuo.cs" />
-    <Compile Include="ArduinoUno.cs" />
-    <Compile Include="Breadboard.cs" />
+    <Compile Include="Components.cs" />
     <Compile Include="Decorator.cs" />
     <Compile Include="DecoratorForm.cs">
       <SubType>Form</SubType>
@@ -80,6 +79,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

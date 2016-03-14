@@ -1,4 +1,4 @@
-﻿namespace DecoratorPattern
+﻿namespace WattCalculator
 {
     partial class DecoratorForm
     {
@@ -31,8 +31,7 @@
             this.lbItems = new System.Windows.Forms.ListBox();
             this.lbOptions = new System.Windows.Forms.ListBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblWatts = new System.Windows.Forms.Label();
+            this.btnCalculate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbItems
@@ -62,37 +61,28 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // label1
+            // btnCalculate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(133, 230);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Watt:";
-            // 
-            // lblWatts
-            // 
-            this.lblWatts.AutoSize = true;
-            this.lblWatts.Location = new System.Drawing.Point(167, 230);
-            this.lblWatts.Name = "lblWatts";
-            this.lblWatts.Size = new System.Drawing.Size(0, 13);
-            this.lblWatts.TabIndex = 5;
+            this.btnCalculate.Location = new System.Drawing.Point(133, 212);
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.Size = new System.Drawing.Size(75, 23);
+            this.btnCalculate.TabIndex = 3;
+            this.btnCalculate.Text = "Calculate";
+            this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // DecoratorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(342, 294);
-            this.Controls.Add(this.lblWatts);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lbOptions);
             this.Controls.Add(this.lbItems);
             this.Name = "DecoratorForm";
             this.Text = "Decorator";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -101,7 +91,6 @@
         private System.Windows.Forms.ListBox lbItems;
         private System.Windows.Forms.ListBox lbOptions;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblWatts;
+        private System.Windows.Forms.Button btnCalculate;
     }
 }

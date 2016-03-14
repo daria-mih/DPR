@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DecoratorPattern
+namespace WattCalculator
 {
     public partial class DecoratorForm : Form
     {
@@ -42,7 +42,6 @@ namespace DecoratorPattern
                     decorator = new RGBLED(decorator);
                     break;
             }
-            lblWatts.Text = decorator.Measure().ToString();
             lbItems.Items.Add(lbOptions.SelectedItem);
         }
 
@@ -58,12 +57,17 @@ namespace DecoratorPattern
 
             MinimizeBox = false;
             MaximizeBox = false;
-            lblWatts.Text = decorator.Measure().ToString();
         }
 
         private void lbOptions_SelectedIndexChanged(object sender, EventArgs e)
         {
             switcher = lbOptions.SelectedIndex;
+        }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Amount of watts: " + decorator.Measure());
+            Dispose();
         }
     }
 }

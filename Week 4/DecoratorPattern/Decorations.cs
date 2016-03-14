@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DecoratorPattern
+namespace WattCalculator
 {
-    class Buzzer : Decorator
+    public class Buzzer : Decorator
     {
-        public Buzzer(IWattCalculator m) : base(m)
+        public Buzzer(IWattCalculator m)
         {
             decoratedMeasurer = m;
         }
@@ -18,9 +18,9 @@ namespace DecoratorPattern
             return (8.91 + decoratedMeasurer.Measure());
         }
     }
-    class LED : Decorator
+    public class LED : Decorator
     {
-        public LED(IWattCalculator m) : base(m)
+        public LED(IWattCalculator m)
         {
             decoratedMeasurer = m;
         }
@@ -31,9 +31,9 @@ namespace DecoratorPattern
         }
     }
 
-    class Resistor : Decorator
+    public class Resistor : Decorator
     {
-        public Resistor(IWattCalculator m) : base(m)
+        public Resistor(IWattCalculator m)
         {
             decoratedMeasurer = m;
         }
@@ -44,16 +44,16 @@ namespace DecoratorPattern
         }
     }
 
-    class RGBLED : Decorator
+    public class RGBLED : Decorator
     {
-        public RGBLED(IWattCalculator m) : base(m)
+        public RGBLED(IWattCalculator m)
         {
             decoratedMeasurer = m;
         }
 
         public override double Measure()
         {
-            return (15.49 + decoratedMeasurer.Measure());
+            return (15.48 + decoratedMeasurer.Measure());
         }
     }
 }

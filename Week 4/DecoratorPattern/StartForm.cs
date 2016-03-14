@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DecoratorPattern
+namespace WattCalculator
 {
     public partial class StartForm : Form
     {
