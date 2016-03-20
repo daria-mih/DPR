@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace CommandPattern
 {
-    public interface Order
+    public enum Status
     {
-        void execute();
-    }
+        off = 0,
+        on = 1
+    };
 }

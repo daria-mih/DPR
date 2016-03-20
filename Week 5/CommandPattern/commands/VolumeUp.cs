@@ -6,16 +6,20 @@ using System.Threading.Tasks;
 
 namespace CommandPattern
 {
-    public class DeclineOrder : Order
+    class VolumeUp : Command
     {
-        Cook cook;
-        public DeclineOrder(Cook cook)
+        Device device;
+        public VolumeUp(Device d)
         {
-            this.cook = cook;
+            device = d;
         }
         public void execute()
         {
-           cook.decline();
+            device.volumeUp();
+        }
+        public void undo()
+        {
+            device.volumeDown();
         }
     }
 }

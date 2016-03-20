@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 namespace CommandPattern
 {
-    class CookOrder : Order
+    class VolumeDown : Command
     {
-        Cook cook;
-
-        public CookOrder (Cook cook)
+        Device device;
+        public VolumeDown(Device d)
         {
-            this.cook = cook;
+            device = d;
         }
-
         public void execute()
         {
-            cook.cook();
+            device.volumeDown();
+        }
+        public void undo()
+        {
+            device.volumeUp();
         }
     }
 }
