@@ -73,9 +73,66 @@ namespace UnitTesting
             Assert.AreEqual(expected, device.volume);
         }
 
+        [TestMethod]
         public void TestTVOn()
         {
-
+            Device device = new Television();
+            Command command = new On(device);
+            DeviceButton button = new DeviceButton(command);
+            button.press();
+            Assert.AreEqual(device.status, Status.on);
         }
+
+        [TestMethod]
+        public void TestTVOff()
+        {
+            Device device = new Television();
+            Command command = new Off(device);
+            DeviceButton button = new DeviceButton(command);
+            button.press();
+            button.press();
+            Assert.AreEqual(device.status, Status.off);
+        }
+
+        [TestMethod]
+        public void TestRadioOn()
+        {
+            Device device = new Radio();
+            Command command = new On(device);
+            DeviceButton button = new DeviceButton(command);
+            button.press();
+            Assert.AreEqual(device.status, Status.on);
+        }
+
+        [TestMethod]
+        public void TestRadioOff()
+        {
+            Device device = new Radio();
+            Command command = new Off(device);
+            DeviceButton button = new DeviceButton(command);
+            button.press();
+            button.press();
+            Assert.AreEqual(device.status, Status.off);
+        }
+
+        [TestMethod]
+        public void TestUndo()
+        {
+            Device device = new Radio();
+            Command command = new On(device);
+            DeviceButton button = new DeviceButton(command);
+            button.press();
+            Assert.AreEqual(device.status, Status.on);
+            button.pressUndo();
+            Assert.AreEqual(device.status, Status.off);
+
+            Command c = new VolumeUp(device);
+            DeviceButton b = new DeviceButton(c);
+            b.press();
+            Assert.AreEqual(11, device.volume);
+            b.pressUndo();
+            Assert.AreEqual(10, device.volume);
+        }
+
     }
 }
