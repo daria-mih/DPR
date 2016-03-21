@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommandPattern
 {
-    class VolumeDown : Command
+    public class VolumeDown : Command
     {
         Device device;
         public VolumeDown(Device d)

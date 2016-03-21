@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommandPattern
 {
-    class Off : Command
+    public class Off : Command
     {
         Device device;
         public Off(Device d)

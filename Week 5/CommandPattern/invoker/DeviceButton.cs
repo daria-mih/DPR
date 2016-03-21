@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommandPattern
 {
-    class DeviceButton
+    public class DeviceButton
     {
         Command c;
         public DeviceButton(Command c)

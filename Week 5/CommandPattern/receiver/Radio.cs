@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommandPattern
 {
-    class Radio : Device
+    public class Radio : Device
     {
         public int volume { get; private set; } = 10;
         public Status status { get; private set; }
@@ -20,11 +20,11 @@ namespace CommandPattern
             status = Status.off;
         }
         public void volumeUp()
-        {
+        { if (volume < 30)
             volume++;
         }
         public void volumeDown()
-        {
+        {  if (volume > 0)
             volume--;
         }
     }
