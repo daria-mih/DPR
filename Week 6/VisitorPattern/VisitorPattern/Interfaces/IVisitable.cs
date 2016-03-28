@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace VisitorPattern
 {
-    public class ShippingPromotion : IVisitor
+    public interface IVisitable
     {
-        public double visit(Laptops laptops)
-        {
-            throw new NotImplementedException();
-        }
+        double price { get; }
+        double shippingprice { get; }
+        double accept(IVisitor visitor);
     }
 }

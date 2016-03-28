@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace VisitorPattern
 {
-    public interface IVisitable
+    public interface IVisitor
     {
-        double accept(IVisitor visitor);
+        double visit(Laptop laptop);
+        double visit(Phone phone);
+        double visit(Camera camera);
     }
 }
