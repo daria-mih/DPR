@@ -10,7 +10,7 @@ namespace VisitorPattern
     /// The prices are reduced by a discount 
     /// and the shipping costs are then added
     /// </summary>
-    class OnlineSalePurchase : IVisitor
+    public class OnlineSalePurchase : IVisitor
     {
         public double visit(Camera camera)
         {

@@ -9,7 +9,7 @@ namespace VisitorPattern
     /// <summary>
     /// The prices are reduced by a certain discount.
     /// </summary>
-    class LocalSalePurchase : IVisitor
+    public class LocalSalePurchase : IVisitor
     {
         public double visit(Camera camera)
         {
