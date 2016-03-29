@@ -5,7 +5,7 @@ using VisitorPattern;
 namespace UnitTesting
 {
     [TestClass]
-    public class UnitTest1
+    public class VisitorUnitTests
     {
         [TestMethod]
         public void TestLocalPurchase()
